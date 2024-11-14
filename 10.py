@@ -28,11 +28,10 @@ class Elevator:
             self.floor_now -= 1
             print (f"you have reached {self.floor_now}")
 
-
-h = Elevator(1, 10)
-h.go_to_floor(9)
-
-h.go_to_floor(1)
+h= Elevator(1,10)
+print(h.go_to_floor(5))
+print(h.go_to_floor(1))
+print(h.go_to_floor(50))
 
 
 ###########################2
