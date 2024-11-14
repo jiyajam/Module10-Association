@@ -63,9 +63,6 @@ class Elevator:
             self.floor_now -= 1
             print(f"You have reached floor {self.floor_now}")
 
-    def current_location(self):
-        return f"The elevator is currently at floor {self.floor_now}"
-
 
 class Building:
     def __init__(self, bottom_floor, top_floor, no_of_elevators):
@@ -75,12 +72,12 @@ class Building:
 
 
         for i in range(no_of_elevators):
-            self.elevators[i] = Elevator(bottom_floor, top_floor)
+            self.elevators[i+1] = Elevator(bottom_floor, top_floor)
 
     def run_elevator(self, elevator_number, destination_floor):
         if elevator_number in self.elevators:
             elevator = self.elevators[elevator_number]
-            print(f"Running elevator {elevator_number + 1} to floor {destination_floor}")
+            print(f"Running elevator {elevator_number} to floor {destination_floor}")
             result = elevator.go_to_floor(destination_floor)
             print(result)
         else:
@@ -88,10 +85,8 @@ class Building:
 
 
 
-building = Building(bottom_floor=1, top_floor=10, no_of_elevators=3)
+building = Building(1, 10, 3)
 building.run_elevator(0, 5)
-elevator1 = building.elevators[0]
-print(elevator1.current_location())
 building.run_elevator(1, 5)
 building.run_elevator(5, 3)
 
