@@ -86,8 +86,8 @@ class Building:
 
 
 building = Building(1, 10, 3)
-building.run_elevator(0, 5)
-building.run_elevator(1, 5)
+building.run_elevator(2, 5)
+building.run_elevator(1, 4)
 building.run_elevator(5, 3)
 
 ##########################3
