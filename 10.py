@@ -28,13 +28,11 @@ class Elevator:
             self.floor_now -= 1
             print (f"you have reached {self.floor_now}")
 
-    def current_location(self):
-        return f"the elevator is now on {self.floor_now}"
 
-elevator1 = Elevator(1, 10)
-print(elevator1.go_to_floor(9))
-print(elevator1.current_location())
-print(elevator1.go_to_floor(1))
+h = Elevator(1, 10)
+h.go_to_floor(9)
+
+h.go_to_floor(1)
 
 
 ###########################2
